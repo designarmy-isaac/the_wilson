@@ -766,7 +766,7 @@ hr {
   height: 105%;
   width: 105%;
   margin: -2.5%;
-  background: url('/img/The_Wilson_background-pattern.svg');
+  background: url('../img/The_Wilson_background-pattern.svg');
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -835,7 +835,7 @@ hr {
   }
 }
 .header-logo {
-  background-image: url('/img/The_Wilson_LOGO_black.svg');
+  background-image: url('../img/The_Wilson_LOGO_black.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
