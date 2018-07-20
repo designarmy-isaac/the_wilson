@@ -11,9 +11,19 @@ $(document).ready(function () {
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     autoScrolling: false,
     fitToSection: false,
-    controlArrows: false,
-    scrollBar: true,
+//    controlArrows: false,
 //    scrollOverflow: true
+    scrollBar: true,
+    onSlideLeave: function(section, origin, destination, direction){
+      var e = section.item, // select section
+        counter = $(e).find('.slide-counter'); // find section's slide counter
+      counter.text(destination.index + 1);
+      if ($(e).find('slide-caption')) {
+        var $caption = $(e).find('.slide-caption');
+        var t = $(destination.item).data('caption');
+      $caption.text(t);
+      }
+    },
 	});
   
   // SLIDESHOWS
@@ -29,9 +39,9 @@ $(document).ready(function () {
   updateSlideshowTotal($slideshowSection1);
   updateSlideshowTotal($slideshowSection2);
   
-  $('.slide-control').click(function(){
-    fullpage_api.moveSlideLeft();
-  });
+//  $('.slide-control').click(function(){
+//    fullpage_api.moveSlideLeft();
+//  });
   
   
 //  function updateSlideCounter1() {

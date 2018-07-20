@@ -252,31 +252,6 @@ textarea {
   text-align: center;
 }
 /* ==========================================================================
-   Page
-   ========================================================================== */
-html {
-  color: white;
-  background: black;
-  font-family: 'SuisseIntlLight', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  height: 100%;
-  width: 100%;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 2px solid white;
-  margin: 1em 0 2em;
-  padding: 0;
-}
-@media only screen and (min-width: 56em) {
-  hr {
-    margin: 1.5em 0 3em;
-  }
-}
-/* ==========================================================================
    Grid
    ========================================================================== */
 .row {
@@ -290,12 +265,6 @@ hr {
   margin-left: 2%;
   margin-right: 2%;
   min-height: 0.125rem;
-}
-.fl-l {
-  float: left !important;
-}
-.fl-r {
-  float: right !important;
 }
 .col-1,
 .col-2,
@@ -366,7 +335,7 @@ hr {
   }
   .rel-1 {
     position: relative;
-    left: 10.25% !important;
+    left: 20.5% !important;
   }
   .pull-1 {
     margin-right: 10.25% !important;
@@ -410,6 +379,84 @@ hr {
   .hidden-sm {
     display: block;
   }
+}
+/* ==========================================================================
+   Layout Helpers
+   ========================================================================== */
+.m-t-0 {
+  margin-top: 0;
+}
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-l-0 {
+  margin-left: 0;
+}
+.m-r-0 {
+  margin-right: 0;
+}
+.m-t-1 {
+  margin-top: 1em;
+}
+.m-b-1 {
+  margin-bottom: 1em;
+}
+.m-t-2 {
+  margin-top: 2em;
+}
+.m-b-2 {
+  margin-bottom: 2em;
+}
+.m-b-6 {
+  margin-bottom: 6em;
+}
+.m-t-10 {
+  margin-top: 10em;
+}
+.m-b-10 {
+  margin-bottom: 10em;
+}
+.p-t-0 {
+  padding-top: 0;
+}
+.p-b-0 {
+  padding-bottom: 0;
+}
+.p-l-0 {
+  padding-left: 0;
+}
+.p-r-0 {
+  padding-right: 0;
+}
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+.text-center-sm {
+  text-align: center;
+}
+.text-right-sm {
+  text-align: right;
+}
+.text-left-sm {
+  text-align: left;
+}
+@media only screen and (min-width: 56em) {
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-center {
+    text-align: center;
+  }
+}
+.fl-l {
+  float: left !important;
+}
+.fl-r {
+  float: right !important;
 }
 /* ==========================================================================
    Colors
@@ -491,6 +538,7 @@ h6,
 h1 {
   font-size: 1.75em;
   letter-spacing: 1px;
+  margin-bottom: 1em;
 }
 h2 {
   font-family: 'SuisseIntlLight', Helvetica, Arial, sans-serif;
@@ -506,10 +554,33 @@ h3 {
   margin-bottom: .5em;
   margin-top: 1em;
 }
+@media only screen and (min-width: 40em) {
+  p {
+    font-size: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+  h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+}
 @media only screen and (min-width: 56em) {
+  p {
+    font-size: 1em;
+    padding-right: 0;
+    padding-left: 0;
+  }
   h1 {
     font-size: 3.5em;
-    line-height: 1.2;
+    line-height: 1.1;
   }
   h2 {
     font-size: 2em;
@@ -538,8 +609,124 @@ a:visited {
   color: inherit;
 }
 /* ==========================================================================
+   Animation
+   ========================================================================== */
+.hide-me {
+  opacity: 0;
+  position: relative;
+  transition: .6s;
+}
+.hide-me.show {
+  opacity: 1;
+}
+@media only screen and (min-width: 56em) {
+  .hide-me.show-left {
+    transition: 1s;
+    left: 1em;
+  }
+  .hide-me.show-left.show {
+    left: 0;
+  }
+  .hide-me.show-right {
+    right: 1em;
+  }
+  .hide-me.show-right.show {
+    right: 0;
+  }
+}
+/* ==========================================================================
+   Slideshow
+   ========================================================================== */
+.slideshow-row {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.slideshow-container {
+  height: 100%;
+}
+.slide-counter,
+.slide-total {
+  display: inline-block;
+  width: 1em;
+}
+.slide-total {
+  text-align: right;
+}
+.fp-controlArrow.fp-next {
+  height: 100% !important;
+  width: 30% !important;
+  top: 2.3em;
+  background: none !important;
+  border: none !important;
+}
+.fp-controlArrow.fp-next::after {
+  float: right;
+  position: relative;
+  top: 50%;
+  right: 20%;
+  content: '';
+  display: inline-block;
+  height: 2em !important;
+  width: 2em !important;
+  background: none !important;
+  border-top: 2px solid white !important;
+  border-right: 2px solid white !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  transform: rotate(45deg) translateY(-1.5em);
+}
+.fp-controlArrow.fp-prev {
+  height: 100% !important;
+  width: 30% !important;
+  top: 2.3em;
+  background: none !important;
+  border: none !important;
+}
+.fp-controlArrow.fp-prev::after {
+  float: left;
+  position: relative;
+  top: 50%;
+  left: 20%;
+  content: '';
+  display: inline-block;
+  height: 2em !important;
+  width: 2em !important;
+  background: none !important;
+  border-top: 2px solid white !important;
+  border-left: 2px solid white !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  transform: rotate(315deg) translateY(-1.5em);
+}
+/* ==========================================================================
    Page
    ========================================================================== */
+html {
+  color: white;
+  background: black;
+  font-family: 'SuisseIntlLight', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid white;
+  margin: 1em 0 2em;
+  padding: 0;
+}
+@media only screen and (min-width: 56em) {
+  hr {
+    margin: 1.5em 0 3em;
+  }
+}
+.no-js .body {
+  opacity: 1;
+  transition: 0;
+}
 .body {
   opacity: 0;
   transition: opacity .2s;
@@ -563,9 +750,9 @@ a:visited {
   color: black;
   transition: background 1s;
 }
-.no-js .body {
-  opacity: 1;
-  transition: 0;
+.scrolled #background {
+  opacity: 0;
+  transition: 1s;
 }
 #scene {
   position: fixed;
@@ -585,6 +772,25 @@ a:visited {
   position: absolute;
   overflow: hidden;
 }
+.logo {
+  margin: 1em auto;
+  max-width: 12em;
+  transition: 2s;
+}
+@media only screen and (min-width: 56em) {
+  .logo {
+    max-width: 20em;
+  }
+}
+@media only screen and (min-width: 86em) {
+  .logo {
+    max-width: 30em;
+  }
+}
+.address {
+  transition: 2.5s;
+  transition-delay: .5s;
+}
 .section {
   min-height: 100%;
   height: 100%;
@@ -593,83 +799,26 @@ a:visited {
   padding-top: 2em;
 }
 #section-body-1 h1 {
-  margin-top: 1em;
+  margin-top: 2em;
+}
+.body .section {
+  padding-bottom: 2em;
+}
+@media only screen and (min-width: 56em) {
+  .body .section {
+    padding-top: 9em;
+    padding-bottom: 10em;
+  }
 }
 @media only screen and (min-width: 56em) {
   .position-absolute-lg {
     position: absolute;
   }
 }
-.hide-me {
-  opacity: 0;
-  position: relative;
-  transition: .6s;
-}
-.hide-me.show {
-  opacity: 1;
-}
 @media only screen and (min-width: 56em) {
   #section-callout {
     text-align: left;
   }
-}
-.m-t-0 {
-  margin-top: 0;
-}
-.m-b-0 {
-  margin-bottom: 0;
-}
-.m-l-0 {
-  margin-left: 0;
-}
-.m-r-0 {
-  margin-right: 0;
-}
-.m-t-1 {
-  margin-top: 1em;
-}
-.m-b-1 {
-  margin-bottom: 1em;
-}
-.m-t-2 {
-  margin-top: 2em;
-}
-.m-b-2 {
-  margin-bottom: 2em;
-}
-.m-b-6 {
-  margin-bottom: 6em;
-}
-.m-t-10 {
-  margin-top: 10em;
-}
-.m-b-10 {
-  margin-bottom: 10em;
-}
-.p-t-0 {
-  padding-top: 0;
-}
-.p-b-0 {
-  padding-bottom: 0;
-}
-.p-l-0 {
-  padding-left: 0;
-}
-.p-r-0 {
-  padding-right: 0;
-}
-.center {
-  margin-right: auto;
-  margin-left: auto;
-}
-.text-centered {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
 }
 .header {
   width: 100%;
@@ -697,42 +846,6 @@ a:visited {
     height: 4em;
   }
 }
-.logo {
-  margin: 1em auto;
-  max-width: 12em;
-  transition: 2s;
-}
-@media only screen and (min-width: 56em) {
-  .logo {
-    max-width: 20em;
-  }
-}
-@media only screen and (min-width: 86em) {
-  .logo {
-    max-width: 30em;
-  }
-}
-.address {
-  transition: 2.5s;
-  transition-delay: .5s;
-}
-.hero {
-  text-align: center;
-}
-.hero-image {
-  width: 100%;
-  max-width: 87.5em;
-  margin-bottom: 2em;
-}
-@media only screen and (min-width: 56em) {
-  .hero-image {
-    margin-bottom: 8em;
-  }
-}
-.features {
-  position: relative;
-  left: 10.25%;
-}
 .gradient-image {
   background: #a1adff;
   /* Old browsers */
@@ -743,57 +856,49 @@ a:visited {
   background: linear-gradient(45deg, #f0f1f8 34%, #a1adff 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.slideshow-row {
-  padding-top: 0;
-  padding-bottom: 0;
+footer {
+  z-index: 9000;
+  padding-bottom: 16em;
 }
-.slideshow-container {
-  height: 100%;
+.download-link-small:before {
+  font-family: 'LineAwesome';
+  font-weight: normal;
+  content: '\F11F';
+  text-decoration: none;
+  border-bottom: 1px solid;
+  margin-right: .75em;
+  position: relative;
+  top: -4px;
+  padding-bottom: 1px;
+  font-size: .8em;
+  transition: .1s;
 }
-.slide-control {
-  position: absolute;
-  z-index: 9999;
+.download-link-small:hover:before {
+  top: -6px;
+  padding-bottom: 3px;
 }
-.slide-control-left {
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-}
-.slide-control-right {
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 50%;
+.download-link-small:visited {
+  color: #818fe1;
 }
 .download-link:before {
   font-family: 'LineAwesome';
   font-weight: normal;
   content: '\F11F';
   text-decoration: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid;
   margin-right: .75em;
   position: relative;
   top: -4px;
   padding-bottom: 1px;
   font-size: .8em;
-  transition: .25s;
+  transition: .1s;
 }
 .download-link:hover:before {
   top: -6px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 .download-link:visited {
   color: #818fe1;
-}
-.social-link {
-  font-size: .8em;
-  display: inline-block;
-  padding-right: .25em;
-}
-footer {
-  z-index: 9000;
-  padding-bottom: 10em;
 }
 .secondary-logo {
   max-width: 12em;
@@ -809,6 +914,11 @@ footer {
 }
 #carr-properties-logo {
   margin-left: -1em;
+}
+.social-link {
+  font-size: .8em;
+  display: inline-block;
+  padding-right: .25em;
 }
 /* ==========================================================================
    Helper classes
