@@ -1,14 +1,91 @@
-/* eslint-env browser */
-/* global $ */
-
+/*eslint-env browser*/
+/*global $, fullpage_api, Parallax*/
 
 $(document).ready(function () {
- 
+  'use strict';
+  
+  $('html').removeClass('no-js');
+  
+  $('#fullpage').fullpage({
+		//options here
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    autoScrolling: false,
+    fitToSection: false,
+    controlArrows: false,
+    scrollBar: true,
+//    scrollOverflow: true
+	});
+  
+  // SLIDESHOWS
+  
+  var $slideshowSection1 = $('#section-body-1'),
+    $slideshowSection2 = $('#section-body-2');
+  
+  function updateSlideshowTotal(e) {
+    var n = e.find('.slide').length;
+    e.find('.slide-total').text(n);
+  }
+  
+  updateSlideshowTotal($slideshowSection1);
+  updateSlideshowTotal($slideshowSection2);
+  
+  $('.slide-control').click(function(){
+    fullpage_api.moveSlideLeft();
+  });
+  
+  
+//  function updateSlideCounter1() {
+//    $('#slide-counter-1').text(fullpage_api.getActiveSlide().index + 1);
+//  }
+//  
+////  function updateSlideCaption1() {
+////    var t = $('.slide1.active').data("caption");
+////    $('#slide-caption-1').text(t);
+////  }
+//
+//  $('#slide-show-1 .slide-control-left').click(function(){
+//    fullpage_api.moveSlideLeft();
+//    updateSlideCounter1();
+//  });
+//  $('#slide-show-1 .slide-control-right').click(function(){
+//    fullpage_api.moveSlideRight();
+//    updateSlideCounter1();
+//  });
+//  
+//  // SLIDESHOW 2
+//  
+//  function updateSlideCounter2() {
+//    $('#slide-counter-2').text(fullpage_api.getActiveSlide().index + 1);
+//  }
+//  
+//  function updateSlideCaption2() {
+//    var t = $('.slide2.active').data("caption");
+//    $('#slide-caption-2').text(t);
+//  }
+//
+//  $('#slide-show-2 .slide-control-left').click(function(){
+//    fullpage_api.moveSlideLeft();
+//    updateSlideCounter2();
+//    updateSlideCaption2();
+//  });
+//  $('#slide-show-2 .slide-control-right').click(function(){
+//    fullpage_api.moveSlideRight();
+//    updateSlideCounter2();
+//    updateSlideCaption2();
+//  });
+
+  // PARALLAX
+  
+  var scene = document.getElementById('scene');
+  new Parallax(scene);
+
+  // GRADIENT ANIMATIONS
+  
   $(document).on("mousemove", function (e) {
 
     var xPos = e.pageX,
       width = window.innerWidth,
-      divisions = 2,
+      divisions = 1,
       per = divisions * 100 * (xPos / width),
       a1 = 0,
       a2;
@@ -25,26 +102,44 @@ $(document).ready(function () {
 
   });
 
-  /* Every time the window is scrolled ... */
-  $(window).scroll(function () {
+  // ANIMATE IN
+    
+  var $hideMe = $('.hide-me'),
+      $backgroundChangeAnchor = $('#section-body-1');
+  
+  function animateMe() {
+    $hideMe.each(function () {
+      /* Check the location of each desired element */
+     var top_of_window = $(window).scrollTop(),
+         bottom_of_window = top_of_window + $(window).height();
+      
+      var top_of_object = $(this).offset().top,
+        bottom_of_object = top_of_object + $(this).outerHeight();
 
-    /* Check the location of each desired element */
-    $('.hide-me').each(function () {
-
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      /* If the object is completely visible in the window, fade it it */
-      if (bottom_of_window > bottom_of_object) {
+      /* If the object is completely visible in the window, fade it in */
+      if (bottom_of_window > bottom_of_object && top_of_object + 20 > top_of_window) {
 
         $(this).addClass('show');
 
+      } else {
+        
+        $(this).removeClass('show');
+      
+      }
+      
+      if ($backgroundChangeAnchor.offset().top < bottom_of_window) {
+        $('body').addClass('scrolled');
+      } else {
+        $('body').removeClass('scrolled');
       }
 
     });
-
-  });
-
+    
+  }
+  
+  animateMe();
+  $(window).scroll(animateMe);
+  
 });
 
 //background: linear-gradient(45deg, #f0f1f8 34%,#a1adff 77%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
