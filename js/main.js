@@ -127,7 +127,7 @@ $(document).ready(function () {
         bottom_of_object = top_of_object + $(this).outerHeight();
 
       /* If the object is completely visible in the window, fade it in */
-      if (bottom_of_window > bottom_of_object && top_of_object + 20 > top_of_window) {
+      if (bottom_of_window > top_of_object + 30 && top_of_object + 20 > top_of_window) {
 
         $(this).addClass('show');
 
