@@ -89,7 +89,6 @@ abbr[title] {
 b,
 strong {
   .font-medium;
-  letter-spacing: 2px;
 }
 
 code,
@@ -298,17 +297,28 @@ textarea {
 
 
 /* ==========================================================================
-   Browser Upgrade Prompt
+   Browser and JS Alerts
    ========================================================================== */
 
-.browserupgrade {
-	background: @color-accent;
-	padding: 0.2;
+.alert {
+	background: #ff0;
+  color: black;
+  letter-spacing: 1px;
+	padding: 1em;
 	display: block;
 	text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
+  a {
+    text-decoration: underline;
+  }
 }
 
-
+#alert-no-js {
+  display: none;
+}
 
 /* ==========================================================================
    Grid
@@ -843,10 +853,20 @@ hr {
   }
 }
 
+.no-fouc {
+  display: none;
+}
+
 .no-js {
   .body {
     opacity: 1;
     transition: 0;
+  }
+  .hide-me {
+    opacity: 1;
+  }
+  #alert-no-js {
+    display: block;
   }
 }
   
@@ -979,7 +999,7 @@ hr {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 2.5em;
+  height: 2.75em;
   @media only screen and (min-width: 56em) {
     height: 4em;
   }

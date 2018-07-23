@@ -4,6 +4,8 @@
 $(document).ready(function () {
   'use strict';
   
+  $('.no-fouc').removeClass('no-fouc');
+  
   $('html').removeClass('no-js');
   
   $('#fullpage').fullpage({
