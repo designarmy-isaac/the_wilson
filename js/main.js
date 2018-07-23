@@ -5,7 +5,6 @@ $(document).ready(function () {
   'use strict';
   
   $('.no-fouc').removeClass('no-fouc');
-  
   $('html').removeClass('no-js');
   
   $('#fullpage').fullpage({
@@ -117,19 +116,21 @@ $(document).ready(function () {
   // ANIMATE IN
     
   var $hideMe = $('.hide-me'),
-      $backgroundChangeAnchor = $('#section-body-1');
+      $backgroundChangeAnchor = $('#background-change-anchor'),
+      $header = $('.header');
   
   function animateMe() {
-    $hideMe.each(function () {
-      /* Check the location of each desired element */
-     var top_of_window = $(window).scrollTop(),
+      var top_of_window = $(window).scrollTop(),
          bottom_of_window = top_of_window + $(window).height();
       
+    $hideMe.each(function () {
+      /* Check the location of each desired element */
       var top_of_object = $(this).offset().top,
-        bottom_of_object = top_of_object + $(this).outerHeight();
+        bottom_of_object = top_of_object + $(this).outerHeight(),
+        middle_of_object = top_of_object + ((bottom_of_object - top_of_object) / 2);
 
       /* If the object is completely visible in the window, fade it in */
-      if (bottom_of_window > top_of_object + 30 && top_of_object + 20 > top_of_window) {
+      if (bottom_of_window > top_of_object + 40 && top_of_window < bottom_of_object - 20 ) {
 
         $(this).addClass('show');
 
@@ -139,13 +140,20 @@ $(document).ready(function () {
       
       }
       
-      if ($backgroundChangeAnchor.offset().top < bottom_of_window) {
-        $('body').addClass('scrolled');
-      } else {
-        $('body').removeClass('scrolled');
-      }
 
     });
+
+    if ($backgroundChangeAnchor.offset().top < top_of_window) {
+      $('body').addClass('scrolled');
+    } else {
+      $('body').removeClass('scrolled');
+    };
+    
+    if ($header.offset().top == top_of_window) {
+      $header.addClass('top');
+    } else {
+      $header.removeClass('top');
+    }
     
   }
   
