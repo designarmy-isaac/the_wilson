@@ -911,7 +911,10 @@ a:visited {
     border-right: 2px solid @color-text-1 !important;
     border-left: none !important;
     border-bottom: none !important;
-    transform: rotate(45deg) translateY(-1.5em);
+    transform: rotate(45deg) translateY(-1.5em) scale(.75);
+    @media only screen and (min-width: 56em) {
+      transform: rotate(45deg) translateY(-1.5em) scale(1);
+    }
   }
 }
 
@@ -937,8 +940,12 @@ a:visited {
     border-left: 2px solid @color-text-1 !important;
     border-right: none !important;
     border-bottom: none !important;
-    transform: rotate(315deg) translateY(-1.5em);
+    transform: rotate(315deg) translateY(-1.5em) scale(.75);
+    @media only screen and (min-width: 56em) {
+      transform: rotate(315deg) translateY(-1.5em) scale(1);
+    }
   }
+  
 }
 
 

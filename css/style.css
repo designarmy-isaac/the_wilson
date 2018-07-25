@@ -769,7 +769,12 @@ a:visited {
   border-right: 2px solid white !important;
   border-left: none !important;
   border-bottom: none !important;
-  transform: rotate(45deg) translateY(-1.5em);
+  transform: rotate(45deg) translateY(-1.5em) scale(0.75);
+}
+@media only screen and (min-width: 56em) {
+  .fp-controlArrow.fp-next::after {
+    transform: rotate(45deg) translateY(-1.5em) scale(1);
+  }
 }
 .fp-controlArrow.fp-prev {
   height: 100% !important;
@@ -792,7 +797,12 @@ a:visited {
   border-left: 2px solid white !important;
   border-right: none !important;
   border-bottom: none !important;
-  transform: rotate(315deg) translateY(-1.5em);
+  transform: rotate(315deg) translateY(-1.5em) scale(0.75);
+}
+@media only screen and (min-width: 56em) {
+  .fp-controlArrow.fp-prev::after {
+    transform: rotate(315deg) translateY(-1.5em) scale(1);
+  }
 }
 /* ==========================================================================
    Page
