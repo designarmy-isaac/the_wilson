@@ -1039,9 +1039,6 @@ footer a:hover:before {
   top: -4px;
   padding-bottom: 1px;
 }
-.download-link-small:visited {
-  color: rgba(129, 143, 225, 0.99);
-}
 .download-link:before {
   font-family: 'LineAwesome';
   font-weight: normal;
@@ -1063,9 +1060,6 @@ footer a:hover:before {
 .download-link:hover:before {
   top: -4px;
   padding-bottom: 1px;
-}
-.download-link:visited {
-  color: rgba(129, 143, 225, 0.99);
 }
 .carr-logo {
   max-width: 16em;
