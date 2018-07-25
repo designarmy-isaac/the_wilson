@@ -607,6 +607,7 @@ h6,
 .title {
   font-size: 3em;
   margin-bottom: 0;
+  margin-top: 2em;
 }
 h1 {
   font-size: 2.25em;
@@ -654,6 +655,9 @@ h3 {
     padding-right: 0;
     padding-left: 0;
   }
+  .title {
+    margin-top: 0;
+  }
   h1,
   .title {
     font-size: 3em;
@@ -669,6 +673,9 @@ h3 {
   }
 }
 @media only screen and (min-width: 86em) {
+  .title {
+    margin-top: 2em;
+  }
   h1,
   .title {
     font-size: 4em;
@@ -697,6 +704,7 @@ a:visited {
   transition: .6s;
   transition-delay: 0;
   top: 1rem;
+  will-change: transform, opacity;
 }
 .hide-me.show {
   opacity: 1;
@@ -826,31 +834,48 @@ hr {
 }
 .body {
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 1s;
 }
 #section-top,
 #section-callout {
-  transition: background .2s;
+  transition: background 1s;
   background: none;
 }
 #background-change-area,
 .header {
   background: white;
 }
+footer {
+  padding-top: 6em;
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+footer img {
+  opacity: 1;
+  transition: 1s;
+}
 .scrolled .body {
   opacity: 1;
   transition: opacity 1s;
+}
+.scrolled footer {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+.scrolled footer img {
+  opacity: 0;
 }
 .scrolled #section-top,
 .scrolled #section-callout {
   background: white;
   transition: background 1s;
 }
-.scrolled #background {
+.scrolled #parallax-background {
   opacity: 0;
   transition: 1s;
 }
-#scene {
+#parallax-scene {
   position: fixed;
   overflow: hidden;
   height: 120%;
@@ -858,7 +883,7 @@ hr {
   width: 100%;
   z-index: -9999;
 }
-#background {
+#parallax-background {
   height: 105%;
   width: 105%;
   margin: -2.5%;
@@ -867,6 +892,10 @@ hr {
   background-size: cover;
   position: absolute;
   overflow: hidden;
+  transition: opacity 1s;
+}
+#parallax-background.faded-out {
+  opacity: 0;
 }
 .logo {
   margin: 1em auto;
@@ -894,8 +923,8 @@ hr {
 #section-body-1 {
   padding-top: 2em;
 }
-#section-body-1 h1 {
-  margin-top: 2em;
+.body {
+  z-index: 1000;
 }
 .body .section {
   padding-top: 2em;
@@ -965,7 +994,6 @@ hr {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 footer {
-  z-index: 9000;
   padding-bottom: 16em;
   text-align: center;
 }
@@ -977,6 +1005,11 @@ footer a:hover:before {
 @media only screen and (min-width: 56em) {
   footer {
     text-align: left;
+  }
+}
+@media only screen and (min-width: 56em) and (max-width: 80em) {
+  footer .footer-email {
+    font-size: 1.25em;
   }
 }
 .download-link-small:before {
@@ -1024,8 +1057,12 @@ footer a:hover:before {
 .download-link:visited {
   color: rgba(129, 143, 225, 0.99);
 }
-.secondary-logo {
-  max-width: 12em;
+.carr-logo {
+  max-width: 16em;
+}
+.transwestern-logo {
+  max-width: 20em;
+  margin-bottom: 1em;
 }
 .secondary-logo-link {
   display: block;
@@ -1047,6 +1084,12 @@ footer a:hover:before {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+/*
+ * Hide with opacity
+ */
+.opacity-zero {
+  opacity: 0;
+}
 /*
  * Hide visually and from screen readers
  */

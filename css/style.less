@@ -725,6 +725,7 @@ h6, .h6 {
 .title {
   font-size: 3em;
   margin-bottom: 0;
+  margin-top: 2em;
 }
 
 h1 {
@@ -779,6 +780,9 @@ h3 {
     padding-right: 0;
     padding-left: 0;
   }
+  .title {
+    margin-top: 0;
+  }
   h1,
   .title{
     font-size: 3em;
@@ -797,6 +801,9 @@ h3 {
 }
 
 @media only screen and (min-width: 86em) {
+  .title {
+    margin-top: 2em;
+  }
   h1,
   .title{
     font-size: 4em;
@@ -830,6 +837,7 @@ a:visited {
   transition: .6s;
   transition-delay: 0;
   top: 1rem;
+  will-change: transform, opacity;
 }
 
 .hide-me.show {
@@ -977,12 +985,12 @@ hr {
   
 .body {
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 1s;
 }
 
 #section-top,
 #section-callout {
-  transition: background .2s;
+  transition: background 1s;
   background: none;
 }
 
@@ -991,23 +999,40 @@ hr {
   background: white;
 }
 
-&.scrolled {
+footer {
+  padding-top: 6em;
+  .background-color-1;
+  transition: 1s;
+  img {
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+.scrolled {
   .body {
     opacity: 1;
     transition: opacity 1s;
+  }
+  footer {
+    background: @color-background-3;
+    color: @color-background-3;
+    img {
+      opacity: 0;
+    }
   }
   #section-top,
   #section-callout {
     background: white;
     transition: background 1s;
   }
-  #background {
+  #parallax-background {
     opacity: 0;
     transition: 1s;
   }
 }
 
-#scene {
+#parallax-scene {
   position: fixed;
   overflow: hidden;
   height: 120%;
@@ -1016,7 +1041,7 @@ hr {
   z-index: -9999;
 }
 
-#background {
+#parallax-background {
   height: 105%;
   width: 105%;
   margin: -2.5%;
@@ -1025,6 +1050,10 @@ hr {
   background-size: cover;
   position: absolute;
   overflow: hidden;
+  transition: opacity 1s;
+  &.faded-out {
+    opacity: 0;
+  }
 }
 
 .logo {
@@ -1051,11 +1080,12 @@ hr {
 
 #section-body-1 {
   padding-top: 2em;
-  h1 {
-    margin-top: 2em;
-  }
 }
-  
+
+.body {
+  z-index: 1000;
+}
+
 .body .section {
   padding-top: 2em;
   padding-bottom: 4em;
@@ -1129,7 +1159,7 @@ hr {
 }
 
 footer {
-  z-index: 9000;
+//  z-index: -1000;
   padding-bottom: 16em;
   text-align: center;
   a:hover,
@@ -1139,7 +1169,12 @@ footer {
   }
   @media only screen and (min-width: 56em) {
       text-align: left;
-  } 
+  }
+  .footer-email {
+    @media only screen and (min-width: 56em) and (max-width: 80em) {
+      font-size: 1.25em;
+    }
+  }
 }
 
 .download-link-small {
@@ -1195,8 +1230,12 @@ footer {
   }
 }
 
-.secondary-logo {
-  max-width: 12em;
+.carr-logo {
+  max-width: 16em;
+}
+.transwestern-logo {
+  max-width: 20em;
+  margin-bottom: 1em;
 }
 
 .secondary-logo-link {
@@ -1327,6 +1366,17 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+/*
+ * Hide with opacity
+ */
+
+.opacity-zero {
+  opacity: 0;
+}
+
+
+
 
 /*
  * Hide visually and from screen readers

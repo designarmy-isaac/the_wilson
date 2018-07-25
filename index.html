@@ -29,8 +29,8 @@
 	<![endif]-->
   <div id="alert-no-js" class="alert"><strong>This site uses Javascript.</strong> Learn how to enable Javascript in your browser <a href="https://www.enable-javascript.com"><strong>here</strong></a>.</div>
   
-  <div id="scene">
-    <div id="background" data-depth="0.1"></div>
+  <div id="parallax-scene">
+    <div id="parallax-background" data-depth="0.1"></div>
   </div>
   
   
@@ -64,7 +64,7 @@
           <h2 class="m-b-2 hide-me">Metro Lines Access</h2>
         </div>
       </div>
-      <div id="background-change-anchor" class="row">
+      <div id="background-change-anchor-1" class="row">
         <div class="col-6 col-7-sm fl-r-sm">
           <h1 class="m-b-0 hide-me">State&#8209;of-the&#8209;Art</h1>
           <h2 class="m-b-2 hide-me">Amenities</h2>
@@ -92,7 +92,7 @@
             <img class="gradient-image hide-me" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-Hero_1090x892px.png">
           </div>
           <div class="col-5 position-absolute-lg m-b-2-lg hidden-sm">
-            <h1 class="title m-top-3 hide-me">Work<br>Vibrantly</h1>
+            <h1 class="title hide-me">Work<br>Vibrantly</h1>
             <p class="rel-1 hide-me">The Wilson is more than just a place to work&mdash;it offers a premier lifestyle that balances work, play, health, and convenience. Twenty-three stories of floor-to-ceiling glass, a rooftop deck and conference center with unobstructed views in all directions, private terraces, and first-class finishes offer best-of-the-best property features&mdash;all on top of the Red and Purple Lines and within walking distance to Bethesda’s best shops and restaurants.</p>
           </div>
           <div class="col-12-sm ib-sm hidden-lg">
@@ -179,11 +179,11 @@
           </div>
         </div>
         
-        <div class="row">
-          <div class="col-4 bump-1 hidden-sm">
+        <div id="background-change-anchor-3" class="row">
+          <div class="col-5 bump-1 hidden-sm">
             <img class="hide-me" alt="7272 Wisconsin Blvd Exterior" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities_2.jpg">
           </div>
-          <div class="col-5 bump-1">
+          <div class="col-5">
             <h3 class="hide-me">Ceremonial Covered Entrance</h3>
             <p class="hide-me">Elegant covered vestibule in the garage offers a convenient pick-up and drop-off location for employees</p>
             <h3 class="hide-me">Bike Room</h3>
@@ -261,32 +261,32 @@
 
         </div>
       </div>
+    </div>
+    <!-- Footer Section: 3 Callouts, Downloads, Footer info -->
 
-  <!-- Footer Section: 3 Callouts, Downloads, Footer info -->
-
-      <footer id="section-footer" class="background-color-1 section fp-auto-height">
+      <footer id="section-footer" class="section fp-auto-height">
         <div class="row">
           <div class="col-6">
-            <h1 class="hide-me">Exclusive Leasing&nbsp;By</h1>
-            <a class="secondary-logo-link hide-me" href="https://transwestern.com"><img class="secondary-logo" alt="Transwestern" src="img/Transwestern_LOGO_400x60px.png"></a>
-            <p class="hide-me">6700 Rockledge Dr, Suite 500-A, Bethesda, MD 20817<br><a href="https://transwestern.com">transwestern.com</a>
+            <h1 class="hide-me">Exclusive <br>Leasing&nbsp;By</h1>
+            <a class="secondary-logo-link hide-me" href="https://transwestern.com"><img class="transwestern-logo" alt="Transwestern" src="img/Transwestern_LOGO_400x60px.png"></a>
+            <p id="background-change-anchor-2" class="hide-me">6700 Rockledge Dr, Suite 500-A, Bethesda, MD 20817<br><a href="https://transwestern.com">transwestern.com</a>
             </p>
           </div>
         </div>
         <div class="row">
           <div class="col-6 fl-r">
-            <h1 class="hide-me">For More Information</h1>
+            <h1 class="hide-me">For More<br>Information</h1>
             <h2 class="hide-me">Phillip McCarthy<br>
             Keith Foery<br>
               Cricket Cleary</h2>
-            <p class="hide-me">301.571.0900<br>
-            workthewilson@transwestern.com</p>
+            <h2 class="hide-me footer-email">301.571.0900<br>
+            workthewilson@transwestern.com</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-6">
             <h1 class="hide-me">Owned and Developed&nbsp;by</h1>
-            <a class="secondary-logo-link hide-me" href="http://carrprop.com"><img id="carr-properties-logo" class="secondary-logo" alt="Carr Properties" src="img/Carr_Properties_LOGO_400x110px.png"></a>
+            <a class="secondary-logo-link hide-me" href="http://carrprop.com"><img id="carr-properties-logo" class="carr-logo" alt="Carr Properties" src="img/Carr_Properties_LOGO_400x110px.png"></a>
           </div>
         </div>
         <div id="downloads" class="row">
@@ -319,14 +319,16 @@
           </div>
         </div>
       </footer>
-      
-    </div>
   </div>
-
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" integrity="sha256-/GKyJ0BQJD8c8UYgf7ziBrs/QgcikS7Fv/SaArgBcEI=" crossorigin="anonymous"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.js" integrity="sha256-VvvOX7Ag23KaKYfrlT5jca3Ky1VdJUc7HUq0tTFJD38=" crossorigin="anonymous"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/vendors/scrolloverflow.min.js" integrity="sha256-jfq3ud3lMThLwo7WNOYbDp2TzcXfgMS3DQPQq/3vOhA=" crossorigin="anonymous"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   
   <script src="js/main.js"></script>
