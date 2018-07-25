@@ -1005,7 +1005,6 @@ footer img {
 }
 footer {
   padding-bottom: 22em;
-  text-align: center;
 }
 footer a:hover,
 footer a:hover:before {
@@ -1077,7 +1076,6 @@ footer a:hover:before {
 }
 .secondary-logo-link {
   display: block;
-  text-align: center;
 }
 @media only screen and (min-width: 56em) {
   .secondary-logo-link {
