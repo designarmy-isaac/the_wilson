@@ -719,7 +719,6 @@ h6, .h6 {
 
 .caption {
   font-size: .875em;
-  margin-top: 1.5em;
 }
 
 .title {
@@ -877,6 +876,10 @@ a:visited {
 
 .slideshow-container {
   height: 100%;
+}
+
+.slideshow-info {
+  padding-top: 1.5em;
 }
 
 .slide-counter,
@@ -1167,7 +1170,7 @@ footer {
 
 footer {
 //  z-index: -1000;
-  padding-bottom: 22em;
+  padding-bottom: 10em;
   a:hover,
   a:hover:before {
     color: @color-accent;
@@ -1251,9 +1254,13 @@ footer {
 }
 
 .social-link {
-  font-size: .8em;
   display: inline-block;
-  padding-right: .25em;
+  font-size: 1em;
+  padding: .25em .75em .75em 0;
+  @media only screen and (min-width: 56em) {
+    font-size: .8em;
+    padding: 0 .75em .25em 0;
+  }
 }
 
 //

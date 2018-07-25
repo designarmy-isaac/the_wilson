@@ -106,7 +106,7 @@ $(document).ready(function () {
 //        middle_of_object = top_of_object + ((bottom_of_object - top_of_object) / 2);
 
       /* If the object is completely visible in the window, fade it in */
-      if (bottom_of_window > top_of_object + 40 && top_of_window < bottom_of_object - 20) {
+      if (bottom_of_window > top_of_object + 10 && top_of_window < bottom_of_object - 20) {
         $(this).addClass('show');
       } else {
         $(this).removeClass('show');

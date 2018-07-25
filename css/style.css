@@ -602,7 +602,6 @@ h6,
 }
 .caption {
   font-size: .875em;
-  margin-top: 1.5em;
 }
 .title {
   font-size: 3em;
@@ -739,6 +738,9 @@ a:visited {
 }
 .slideshow-container {
   height: 100%;
+}
+.slideshow-info {
+  padding-top: 1.5em;
 }
 .slide-counter,
 .slide-total {
@@ -1004,7 +1006,7 @@ footer img {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 footer {
-  padding-bottom: 22em;
+  padding-bottom: 10em;
 }
 footer a:hover,
 footer a:hover:before {
@@ -1080,9 +1082,15 @@ footer a:hover:before {
   margin-left: -1em;
 }
 .social-link {
-  font-size: .8em;
   display: inline-block;
-  padding-right: .25em;
+  font-size: 1em;
+  padding: .25em .75em .75em 0;
+}
+@media only screen and (min-width: 56em) {
+  .social-link {
+    font-size: .8em;
+    padding: 0 .75em .25em 0;
+  }
 }
 /* ==========================================================================
    Helper classes
