@@ -10,120 +10,356 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/glide.core.min.css">
+  <link rel="stylesheet" href="css/line-awesome.css">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/brands.css" integrity="sha384-SYNjKRRe+vDW0KSn/LrkhG++hqCLJg9ev1jIh8CHKuEA132pgAz+WofmKAhPpTR7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css" integrity="sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.css">
+
+  <script>
+      document.documentElement.className = 'no-fouc';
+  </script>
+
 </head>
 
 <body>
 	<!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <div class="alert">You are using an outdated browser. Please <a href="https://browsehappy.com/"><strong>upgrade to a modern browser</strong></a> to improve experience and security.</div>
 	<![endif]-->
-
-	<div class="container text-centered">
+  <div id="alert-no-js" class="alert"><strong>This site uses Javascript.</strong> Learn how to enable Javascript in your browser <a href="https://www.enable-javascript.com"><strong>here</strong></a>.</div>
+  
+  <div id="parallax-scene">
+    <div id="parallax-background" data-depth="0.1"></div>
+  </div>
+  
+  
+  <div id="fullpage">
+  
+<!-- LOGO -->
+    
+    <div class="section text-center-sm" id="section-top">
+      <img class="logo hide-me" alt="The Wilson" src="img/The_Wilson_LOGO_560x200px.png">
+      <p class="text-center-sm hide-me address caption">7272 Wisconsin Blvd, Bethesda, MD</p>
+    </div>
+    
+<!-- First 4 Callouts -->
+    
+     <div class="section" id="section-callout">
+      <div class="row">
+        <div class="col-6 bump-1-sm col-11-sm">
+          <h1 class="m-b-0 hide-me">350,000 SF</h1>
+          <h2 class="m-b-2 hide-me">Trophy Office Space</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-7-sm fl-r-sm">
+          <h1 class="m-b-0 hide-me">23 Stories</h1>
+          <h2 class="m-b-2 hide-me">Floor-to-Ceiling Glass</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 bump-1-sm col-11-sm">
+          <h1 class="m-b-0 hide-me">Red &amp; Purple</h1>
+          <h2 class="m-b-2 hide-me">Line Access</h2>
+        </div>
+      </div>
+      <div id="background-change-anchor-1" class="row">
+        <div class="col-6 col-7-sm fl-r-sm">
+          <h1 class="m-b-0 hide-me">State&#8209;of-the&#8209;Art</h1>
+          <h2 class="m-b-2 hide-me">Amenities</h2>
+        </div>
+      </div>
+    </div>
+    
+  <div class="body">
+    
+    <div id="background-change-area" class="section fp-auto-height"><div></div></div>
+    
     <div class="header">
-      <img class="logo" src="img/The_Wilson_LOGO_560x200px.png">
+      <a href="#section-body-1"><div class="header-logo hide-me"></div></a>
     </div>
-    
-		<div class="hero">
-			<img class="hero-image gradient-image" src="img/7272_Wisconsin_HERO_1400x760px.png">
-		</div>
-    <div class="row main">
-      <div class="col-10 bump-1">
-        <h1 class="hide-me">Work Vibrantly</h1>
-      </div>
-      <div class="col-3 bump-1">
-        <h2 class="hide-me">328,000 SF</h2>
-        <p class="hide-me">Available for Rent</p>
-        <h2 class="hide-me">Red &amp; Purple</h2>
-        <p class="hide-me">Metro Lines Access</p>
-      </div>
-      <div class="col-7">
-        <h2 class="hide-me">23 Stories</h2>
-        <p class="hide-me">Floor-to-Ceiling Glass</p>
-        <h2 class="hide-me">State-of-the-Art</h2>
-        <p class="hide-me">Amenities</p>
-      </div>
-      <div class="col-8 pull-1 hidden-sm fl-r">
-        <img class="gradient-image" src="img/The_Wilson_INTERIOR_2b.png">
-      </div>
-    </div>
-    
-    <div class="carousel col-10 center">
-      <div class="glide">
-        <div class="glide__arrows hidden-sm" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left hidden-sm" data-glide-dir="<"></button>
-          <button class="glide__arrow glide__arrow--right hidden-sm" data-glide-dir=">"></button>
+      
+  <!-- Body Sub-Section 1: 2-column image right, slideshow with no caption -->
+
+      <div id="section-body-1" class="background-color-2 section fp-auto-height">
+
+        <div class="row">
+          <div class="col-12 hidden-lg">
+            <h1 class="title m-top-3">Work<br>Vibrantly</h1>
+          </div>
+          <div class="col-8 fl-r m-b-2">
+            <img class="gradient-image hide-me" alt="7272 Wisconsin Blvd, Bethesda MD" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-Hero_1090x892px.png">
+          </div>
+          <div class="col-5 position-absolute-lg m-b-2-lg hidden-sm">
+            <h1 class="title hide-me">Work<br>Vibrantly</h1>
+            <p class="rel-1 hide-me">The Wilson is more than just a place to work&mdash;it offers a premier lifestyle that balances work, play, health, and convenience. Twenty-three stories of floor-to-ceiling glass, a rooftop deck and conference center with unobstructed views in all directions, private terraces, and first-class finishes offer best-of-the-best property features&mdash;all on top of the Red and Purple Lines and within walking distance to Bethesda’s best shops and restaurants.</p>
+          </div>
+          <div class="col-12-sm ib-sm hidden-lg">
+            <p>The Wilson is more than just a place to work&mdash;it offers a premier lifestyle that balances work, play, health, and convenience. Twenty-three stories of floor-to-ceiling glass, a rooftop deck and conference center with unobstructed views in all directions, private terraces, and first-class finishes offer best-of-the-best property features&mdash;all on top of the Red and Purple Lines and within walking distance to Bethesda’s best shops and restaurants.</p>
+          </div>
         </div>
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide"><img class="carousel-image" src="img/7272_Wisconsin_RENDERING_1100x667px.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_3.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_4.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_5.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_6.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_7.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_8.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_9.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/The_Wilson_INTERIOR_10.jpg"></li>
-            <li class="glide__slide"><img class="carousel-image" src="img/7272_Wisconsin_RENDERING_1100x667px.jpg"></li>
-          </ul>
+        
+        <div id="slideshow-1" class="row slideshow-row"> 
+          <div class="slides-container center col-12">
+            <div class="slide" data-caption="Future Bethesda Skyline">
+              <img class="slide-image hide-me" alt="Future Bethesda Skyline" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-2.jpg">
+            </div>
+            <div class="slide" data-caption="Future Shared Plaza">
+              <img class="slide-image hide-me" alt="Future Shared Plaza" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-3.jpg">
+            </div>
+            <div class="slide" data-caption="Future Streetscape">
+              <img class="slide-image hide-me" alt="Future Streetscape" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-4.jpg">
+            </div>
+          </div>
+        </div>
+        <div id="slideshow-info-1" class="row slideshow-row slideshow-info">
+          <div class="col-4-sm col-5 caption bump-1 text-left-sm">
+            <span class="slide-counter">1</span> / <span class="slide-total"></span>
+          </div>
+          <div class="col-8-sm col-5 caption text-right-sm">
+            <span class="slide-caption">Future Bethesda Skyline</span>
+          </div>
+        </div>
+        
+      </div>
+
+  <!-- Body Sub-Section 2: 2-column image right, slideshow with caption 2-column image left -->
+
+      <div id="section-body-2" class="background-color-3 section fp-auto-height">
+
+        <div class="row m-b-2-lg">
+          <div class="col-5">
+            <h1 class="hide-me">Exceptional<br>Amenities</h1>
+            <h3 class="rel-1 hide-me hidden-sm">Grand Entrance Lobby</h3>
+            <p class="rel-1 hide-me hidden-sm">Grand entrance lobby with 30-foot ceilings and direct connectivity to outdoor retail plaza with seating and access to a lively urban environment</p>
+            <h3 class="rel-1 hide-me hidden-sm">Fitness Center</h3>
+            <p class="rel-1 hide-me hidden-sm">Second-story access to an expansive ﬁtness center overlooking Wisconsin Blvd</p>
+            <h3 class="rel-1 hide-me hidden-sm">Multipurpose Rooftop</h3>
+            <p class="rel-1 hide-me hidden-sm">Multipurpose rooftop penthouse with fantastic views from the 290-foot tower. The meticulously designed indoor/outdoor space can be used as a conference facility, social event space, or daytime tenant lounge</p>
+          </div>
+          <div class="col-6 col-10-sm bump-1 bump-1-sm">
+            <iframe src="https://vr.yulio.com/vres/RNBw7GharU/fprs/LrEEQGDMwQ/preview/?type=embed" frameborder="0" scrolling="no" allowfullscreen="" style="width: 100%; height: 600px;"></iframe>
+          </div>
+        </div>
+
+        <div id="slideshow-2" class="row slideshow-row"> 
+          <div class="slides-container center col-12 col-12-sm">
+            <div class="slide" data-caption="Grand Entrance Lobby">
+              <img class="slide-image hide-me" alt="Grand Entrance Lobby" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-3_Grand-Entrance-Lobby.jpg">
+            </div>
+            <div class="slide" data-caption="Grand Entrance Lobby">
+              <img class="slide-image hide-me" alt="Grand Entrance Lobby" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-4_Grand-Entrance-Lobby.jpg">
+            </div>
+            <div class="slide" data-caption="Office Lobby Mezzanine">
+              <img class="slide-image hide-me" alt="Office Lobby Mezzanine" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-5_Office-Lobby-Mezzanine.jpg">
+            </div>
+            <div class="slide" data-caption="Multipurpose Rooftop">
+              <img class="slide-image hide-me" alt="Multipurpose Rooftop" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-6_Multipurpose-Rooftop.jpg">
+            </div>
+            <div class="slide" data-caption="Multipurpose Rooftop">
+              <img class="slide-image hide-me" alt="Multipurpose Rooftop" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-7_Multipurpose-Rooftop.jpg">
+            </div>
+            <div class="slide" data-caption="Multipurpose Rooftop">
+              <img class="slide-image hide-me" alt="Multipurpose Rooftop" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-8_Multipurpose-Rooftop.jpg">
+            </div>
+            <div class="slide" data-caption="Convenient Covered Entrance">
+              <img class="slide-image hide-me" alt="Convenient Covered Entrance" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities-9_Ceremonial-Covered-Entrance.jpg">
+            </div>
+          </div>
+        </div>
+        <div id="slideshow-info-2" class="row slideshow-row slideshow-info">
+          <div class="col-4-sm col-5 caption bump-1 text-left-sm">
+            <span class="slide-counter">1</span> / <span class="slide-total"></span>
+          </div>
+          <div class="col-8-sm col-5 caption text-right-sm">
+            <span class="slide-caption">Grand Entrance Lobby</span>
+          </div>
+        </div>
+        
+        <div id="background-change-anchor-3" class="row">
+          <div class="col-5 bump-1 hidden-sm">
+            <img class="hide-me" alt="7272 Wisconsin Blvd Exterior" src="img/7272-Wisconsin-Blvd_The-Wilson_Amenities_2.jpg">
+          </div>
+          <div class="col-5">
+            <h3 class="hide-me">Convenient Covered Entrance</h3>
+            <p class="hide-me">Elegant covered vestibule in the garage offers a convenient pick-up and drop-off location for employees</p>
+            <h3 class="hide-me">Bike Room</h3>
+            <p class="hide-me">Below-grade bike room with elevator access to the lobby and ﬁtness center</p>
+            <h3 class="hide-me">Private Tenant Terraces</h3>
+            <p class="hide-me">Large, lush private tenant terraces on ﬂoors 6, 7, 12, 16 and 20</p>
+            <h3 class="hidden-lg">Grand Entrance Lobby</h3>
+            <p class="hidden-lg">Grand entrance lobby with 30-foot ceilings and direct connectivity to outdoor retail plaza with seating and access to a lively urban environment</p>
+            <h3 class="hidden-lg">Fitness Center</h3>
+            <p class="hidden-lg">Second-story access to an expansive ﬁtness center overlooking Wisconsin Blvd</p>
+            <h3 class="hidden-lg">Multipurpose Rooftop</h3>
+            <p class="hidden-lg">Multipurpose rooftop penthouse with fantastic views from the 290-foot tower. The meticulously designed indoor/outdoor space can be used as a conference facility, social event space, or daytime tenant lounge</p>
+          </div>
+        </div>
+        
+      </div>
+
+    <!-- Body Section 3: 2-column image right, static full-width image -->
+
+      <div id="section-body-3" class="background-color-2 section fp-auto-height">
+
+        <div class="row">
+
+          <div class="col-5">
+            <h1 class="hide-me">Where <br class="hidden-sm">Function<br>Meets <br class="hidden-sm">Design</h1>
+            <h3 class="rel-1 hide-me hidden-sm">Abundant Natural Light</h3>
+            <p class="rel-1 hide-me hidden-sm">Employees will never be more than 40 feet from a window, meeting the GSA standard for the benefits of natural light</p>
+            <h3 class="rel-1 hide-me hidden-sm">Manageable Floorplates</h3>
+            <p class="rel-1 hide-me hidden-sm">20,000-square-foot floorplates offer a unique branding opportunity</p>
+            <h3 class="rel-1 hide-me hidden-sm">Column-free</h3>
+            <p class="rel-1 hide-me hidden-sm m-b-2">Floorplates without columns offer efficiency, flexibility and freedom to design the best possible workspace</p>
+          </div>
+
+          <div class="col-5 bump-1 m-b-2 hidden-sm">
+            <img class="hide-me" alt="7272 Wisconsin Blvd Exterior" src="img/7272-Wisconsin-Blvd_The-Wilson_Exterior-5.jpg">
+          </div>
+
+          <div class="col-12-sm m-b-2 m-t-1">
+            <img class="hide-me" style="margin: 0; width: 100%; padding: 0;" alt="7272 Wisconsin Blvd Multipurpose Rooftop" src="img/7272-Wisconsin-Blvd_The-Wilson_Multipurpose-Rooftop.jpg">
+          </div>
+          
+          <div class="col-12-sm hidden-lg">
+            <h3>Abundant Natural Light</h3>
+            <p>Employees will never be more than 40 feet from a window, meeting the GSA standard for the benefits of natural light</p>
+            <h3>Manageable Floorplates</h3>
+            <p>20,000-square-foot floorplates offer a unique branding opportunity</p>
+            <h3>Column-free</h3>
+            <p>Floorplates without columns offer efficiency, flexibility and freedom to design the best possible workspace</p>
+          </div>
+
         </div>
 
       </div>
-      <h2 class="m-top-1 text-centered">7272 Wisconsin Ave, Bethesda, MD 20814</h2>
-    </div>
-    
-    <div class="row">
-      <div class="col-5 bump-1">
-        <h3>For More Information</h3>
-        <p><strong>PHILLIP MCCARTHY</strong><br>
-          <strong>KEITH FOERY</strong><br>
-          <strong>CRICKET CLEARY</strong><br>
-          301.571.0900
-        </p>
-      </div>
-      <div class="col-5">
-        <h3>Exclusive Leasing by</h3>
-        <a class="secondary-logo-link" href="https://transwestern.com"><img class="secondary-logo" alt="Transwestern" src="img/Transwestern_LOGO_400x60px.png"></a>
-        <p>6700 ROCKLEDGE DR, SUITE 500-A, BETHESDA, MD 20817<br>
-          301.571.0900 | <a href="https://transwestern.com">TRANSWESTERN.COM</a><br>
-          workthewilson@transwestern.com
-        </p>
-      </div>
-      <div class="col-5 bump-1">
-        <h3>Owned and Developed By</h3>
-        <a class="secondary-logo-link" href="http://carrprop.com"><img id="carr-properties-logo" class="secondary-logo" alt="Carr Properties" src="img/Carr_Properties_LOGO_400x110px.png"></a>
-      </div>
-    </div>
-	</div>
 
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-    crossorigin="anonymous"></script>
+  <!-- Body Section 4: Floorplans -->
 
-
-	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  <script>
-    new Glide('.glide', {autoplay: 5000, animationDuration: 500, rewindDuration: 0}).mount()
-  </script>
-  <script src="js/main.js"></script>
-
+      <div id="section-body-4" class="background-color-3 section fp-auto-height">
+        <div class="row">
+          <div class="col-5 col-12-sm m-b-1">
+            <h1 class="hide-me">Floor <br class="hidden-sm">Plans</h1>
+            <h3 class="rel-1 hide-me hidden-sm">Available Levels</h3>
+            <p class="rel-1 hide-me hidden-sm">
+              Level 9<br>
+              Level 10<br>
+              Level 11<br>
+              Level 12<br>
+              Level 13<br>
+              Level 14<br>
+              Level 15
+            </p> 
 <!--
-	
-	<script src="js/plugins.js"></script>
-	<script>
-		window.ga = function() {
-			ga.q.push(arguments)
-		};
-		ga.q = [];
-		ga.l = +new Date;
-		ga('create', 'UA-XXXXX-Y', 'auto');
-		ga('send', 'pageview')
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+            <h4 class="rel-1 m-b-1 hide-me hidden-sm">
+              <a class="download-link-small" href="#"><span> Download Floor Plans</span></a>
+            </h4>
 -->
+          </div>
+          <div class="col-5 col-6-sm pull-1 fl-r">
+            <img class="hide-me" alt="7272 Wisconsin Blvd Floor Plan Levels 9 – 10" src="img/7272-Wisconsin-Blvd_The-Wilson_Floor-Plans_Levels-9-10.png">
+            <p class="hide-me caption m-t-1">Sample Plan, <br class="hidden-lg">Levels 9 &ndash; 10</p>
+          </div>
+          <div class="col-5 col-6-sm">
+            <img class="rel-1 hide-me" alt="7272 Wisconsin Blvd Floor Plan Levels 11 – 15" src="img/7272-Wisconsin-Blvd_The-Wilson_Floor-Plans_Levels-11-15.png">
+            <p class="hide-me rel-1 caption m-t-1">Sample Plan, <br class="hidden-lg">Levels 11 &ndash; 15</p>
+          </div>
+          <div class="col-12-sm hidden-lg">
+            <h3>Available Levels</h3>
+            <p>
+              Level 9<br>
+              Level 10<br>
+              Level 11<br>
+              Level 12<br>
+              Level 13<br>
+              Level 14<br>
+              Level 15
+            </p> 
+<!--
+            <h4>
+              <a class="download-link-small" href="#"><span> Download Floor Plans</span></a>
+            </h4>
+-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section: 3 Callouts, Downloads, Footer info -->
+
+      <footer id="section-footer" class="section fp-auto-height">
+        <div id="background-change-anchor-2" class="row">
+          <div class="col-6">
+            <h1 class="hide-me">Exclusive <br>Leasing&nbsp;By</h1>
+            <a class="secondary-logo-link hide-me" href="https://transwestern.com"><img class="transwestern-logo" alt="Transwestern" src="img/Transwestern_LOGO_400x60px.png"></a>
+            <p class="hide-me">6700&nbsp;Rockledge&nbsp;Dr, Suite&nbsp;500-A, Bethesda,&nbsp;MD&nbsp;20817<br><a href="https://transwestern.com">transwestern.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 fl-r">
+            <h1 class="hide-me">For More<br>Information</h1>
+            <h2 class="hide-me">Phillip McCarthy<br>
+            Keith Foery<br>
+              Cricket Cleary</h2>
+            <h2 class="hide-me footer-email">301.571.0900<br>
+            workthewilson@transwestern.com</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h1 class="hide-me">Owned and Developed&nbsp;by</h1>
+            <a class="secondary-logo-link hide-me" href="http://carrprop.com"><img id="carr-properties-logo" class="carr-logo" alt="Carr Properties" src="img/Carr_Properties_LOGO_400x110px.png"></a>
+          </div>
+        </div>
+        <div id="downloads" class="row">
+          <hr class="col-12 hide-me">
+<!--
+          <div class="col-6">
+            <h1 class="hide-me">Downloads</h1>
+          </div>
+          <div class="col-6">
+            <h2 class="hide-me m-b-0">
+              <a class="download-link" href="#"><span> Brochure</span></a>
+            </h2>
+            <h2 class="hide-me">
+              <a class="download-link" href="#"><span> Floor Plans</span></a>
+            </h2>
+          </div>
+          <hr class="col-12 hide-me">
+-->
+        </div>
+        <div class="row">
+          <div class="col-6 m-b-2">
+            <h2 class="hide-me">Follow Us<br>
+                <a class="social-link hide-me" target="_blank" href="https://twitter.com/workthewilson"><i class="fab fa-twitter"></i></a>
+                <a class="social-link hide-me" target="_blank" href="https://www.facebook.com/pages/biz/commercial_real_estate/Work-The-Wilson-331263137382784/"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-link hide-me" target="_blank" href="https://instagram.com/workthewilson"><i class="fab fa-instagram"></i></a>
+            </h2>
+          </div>
+          <div class="col-6 m-b-2">
+            <h2 class="hide-me">7272 Wisconsin Blvd,<br>
+                Bethesda, MD 20814
+            </h2>
+          </div>
+        </div>
+      </footer>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" integrity="sha256-/GKyJ0BQJD8c8UYgf7ziBrs/QgcikS7Fv/SaArgBcEI=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.js" integrity="sha256-VvvOX7Ag23KaKYfrlT5jca3Ky1VdJUc7HUq0tTFJD38=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/vendors/scrolloverflow.min.js" integrity="sha256-jfq3ud3lMThLwo7WNOYbDp2TzcXfgMS3DQPQq/3vOhA=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  
 </body>
 
 </html>
