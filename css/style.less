@@ -833,35 +833,38 @@ a:visited {
 
 @media only screen and (min-width: 56em) {
   .hide-me {
+    will-change: transform, opacity;
     opacity: 0;
-    position: relative;
     transition: .6s;
     transition-delay: 0;
-    top: 1rem;
-    will-change: transform, opacity;
+    -webkit-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    transform: translateY(1em);
   }
 
   .hide-me.show {
     opacity: 1;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
-  .hide-me.show-left {
-    transition: .6s;
-    left: 1rem;
-    top: 0;
-    &.show {
-      top: 0;
-      left: 0;
-    }
-  }
-  .hide-me.show-right {
-    transition: .6s;
-    left: -1rem;
-    top: 0;
-    &.show {
-      top: 0;
-      left: 0;
-    }
+//  .hide-me.show-left {
+//    transition: .6s;
+//    left: 1rem;
+//    top: 0;
+//    &.show {
+//      top: 0;
+//      left: 0;
+//    }
+//  }
+//  .hide-me.show-right {
+//    transition: .6s;
+//    left: -1rem;
+//    top: 0;
+//    &.show {
+//      top: 0;
+//      left: 0;
+//    }
   }
 }
 
